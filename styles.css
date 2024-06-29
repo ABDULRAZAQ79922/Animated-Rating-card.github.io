@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #524e4e;
+    margin: 0;
+}
+
+.rating-card {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(145deg, #fce4ec, #bbf8f8);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    max-width: 350px;
+    transition: transform 0.3s;
+}
+
+.rating-card:hover {
+    transform: scale(1.05);
+}
+
+.rating-card h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #e91e63;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 55px;
+}
+
+.star {
+    font-size: 42px;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+    color: #000000;
+}
+
+.star:hover,
+.star.active {
+    transform: scale(1.3);
+    color: #ffeb3b;
+}
+
+.rating-text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #d81b60;
+    transform: translateY(-3px);
+}
+
+.submit-btn:active {
+    background-color: #c2185b;
+    transform: translateY(0);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.star:hover {
+    animation: bounce 0.5s;
+}
